@@ -8,14 +8,19 @@ const List = function({ items }) {
         <thead>
           <tr>
             <th style={{ width: "100px", textAlign: "middle" }}>Date</th>
-            <th>Location</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
-          {items.map((item, index) => (
-            <ListItem key={`listitem${index}`} item={item} />
-          ))}
+          {items.length ? (
+            items.map((item, index) => (
+              <ListItem key={`listitem${index}`} item={item} />
+            ))
+          ) : (
+            <tr>
+              <td colSpan="2">No items matching search</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
