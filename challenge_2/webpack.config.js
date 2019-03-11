@@ -7,13 +7,16 @@ module.exports = {
   module: {
     rules: [
       {
-      test: /\.jsx?$/,
-      use: 'babel-loader',
-      exclude: /node_modules/
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
       }
     ]
   },
   resolve: {
-    extensions: ['', '*', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
-}
+};
