@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import PlayArea from "./components/PlayArea";
 
 const App = function() {
-  return <div>Hello All</div>;
+  return (
+    <div>
+      Welcome to the Bowling Score Card App
+      <PlayArea />
+    </div>
+  );
 };
 
 export default App;
