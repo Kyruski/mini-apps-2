@@ -7,6 +7,7 @@ const KeyPadItem = function({ item, onKeyPadPress }) {
 
   return (
     <td
+      className="keypad-btn"
       style={{
         width: "100px",
         height: "100px",
