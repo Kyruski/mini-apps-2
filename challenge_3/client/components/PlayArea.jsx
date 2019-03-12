@@ -34,7 +34,7 @@ const PlayArea = function(props) {
 
   const insertIntoScore = (number, num2) => {
     if (currIndex >= 20) {
-      console.log("Error: Game is over");
+      setMessage("Error: Game is over");
       return;
     }
     let isNum2 = num2 !== undefined;
